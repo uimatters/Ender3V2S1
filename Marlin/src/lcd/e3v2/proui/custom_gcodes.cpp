@@ -1,8 +1,8 @@
 /**
  * Custom G-code implementation for PRO UI
  * Author: Miguel A. Risco-Castillo (MRISCOC)
- * Version: 2.2.0
- * Date: 2023/08/04
+ * Version: 2.3.0
+ * Date: 2023/09/07
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as
@@ -61,7 +61,7 @@ void cError() {
   }
 #endif
 
-#if ENABLED(LCD_BED_TRAMMING)
+#if ALL(PROUI_EX, LCD_BED_TRAMMING)
   // Bed tramming
   void C35() {
     if (parser.seenval('T')) {
@@ -119,7 +119,7 @@ void customGcode(const int16_t codenum) {
     #if HAS_CUSTOM_COLORS
       case 11: C11(); break;            // Set color for UI element E
     #endif
-    #if ENABLED(LCD_BED_TRAMMING)
+    #if ALL(PROUI_EX, LCD_BED_TRAMMING)
       case 35: C35(); break; // Launch bed tramming wizard
     #endif
     case 108: C108(); break;            // Cancel a Wait for User without an Emergecy Parser

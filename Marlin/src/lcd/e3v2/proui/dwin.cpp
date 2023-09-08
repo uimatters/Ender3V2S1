@@ -122,7 +122,7 @@
   #include "lockscreen.h"
 #endif
 
-#if ENABLED(LCD_BED_TRAMMING)
+#if ALL(PROUI_EX, LCD_BED_TRAMMING)
   #include "bed_tramming.h"
 #endif
 
@@ -228,9 +228,6 @@ char dateTime[16+1] =
 // New menu system pointers
 Menu *fileMenu = nullptr;
 Menu *prepareMenu = nullptr;
-#if ENABLED(LCD_BED_TRAMMING)
-  Menu *trammingMenu = nullptr;
-#endif
 Menu *moveMenu = nullptr;
 Menu *controlMenu = nullptr;
 Menu *advancedSettings = nullptr;
@@ -287,6 +284,9 @@ Menu *stepsMenu = nullptr;
 #if PROUI_EX
   #if ENABLED(NOZZLE_PARK_FEATURE)
      Menu *parkPosMenu = nullptr;
+  #endif
+  #if ENABLED(LCD_BED_TRAMMING)
+    Menu *trammingMenu = nullptr;
   #endif
   Menu *phySetMenu = nullptr;
 #endif
@@ -2639,7 +2639,7 @@ void drawPrepareMenu() {
       MENU_ITEM(ICON_FilMan, MSG_FILAMENT_MAN, onDrawSubMenu, drawFilamentManMenu);
     #endif
     MENU_ITEM(ICON_Axis, MSG_MOVE_AXIS, onDrawSubMenu, drawMoveMenu);
-    #if ENABLED(LCD_BED_TRAMMING)
+    #if ALL(PROUI_EX, LCD_BED_TRAMMING)
       MENU_ITEM(ICON_Tram, MSG_BED_TRAMMING, onDrawSubMenu, drawTrammingMenu);
     #endif
     MENU_ITEM(ICON_CloseMotor, MSG_DISABLE_STEPPERS, onDrawMenuItem, disableMotors);
@@ -2670,7 +2670,7 @@ void drawPrepareMenu() {
   updateMenu(prepareMenu);
 }
 
-#if ENABLED(LCD_BED_TRAMMING)
+#if ALL(PROUI_EX, LCD_BED_TRAMMING)
 
   void setManualTramming() {
     toggleCheckboxLine(hmiData.fullManualTramming);
