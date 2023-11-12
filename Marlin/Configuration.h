@@ -21,9 +21,6 @@
  */
 #pragma once
 
-// Created by configs generator for Professional firmware
-// https://github.com/mriscoc/Ender3V2S1
-
 /**
  * Configuration.h
  *
@@ -55,7 +52,7 @@
  *                      https://reprap.org/wiki/Triffid_Hunter%27s_Calibration_Guide
  *                      https://web.archive.org/web/20220907014303/https://sites.google.com/site/repraplogphase/calibration-of-your-reprap
  *                      https://youtu.be/wAL9d7FgInk
- *                      https://teachingtechyt.github.io/calibration.html
+*                      https://teachingtechyt.github.io/calibration.html
  *
  * Calibration Objects: https://www.thingiverse.com/thing:5573
  *                      https://www.thingiverse.com/thing:1278865
@@ -64,7 +61,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "Miguel Risco-Castillo (MRiscoC)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "Corey Reed" // Who made the changes.
 #define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 // @section machine
@@ -185,15 +182,15 @@
  */
 #ifdef I_DRIVER_TYPE
   #define AXIS4_NAME 'A' // :['A', 'B', 'C', 'U', 'V', 'W']
-  #define AXIS4_ROTATES
+#define AXIS4_ROTATES
 #endif
 #ifdef J_DRIVER_TYPE
   #define AXIS5_NAME 'B' // :['B', 'C', 'U', 'V', 'W']
-  #define AXIS5_ROTATES
+#define AXIS5_ROTATES
 #endif
 #ifdef K_DRIVER_TYPE
   #define AXIS6_NAME 'C' // :['C', 'U', 'V', 'W']
-  #define AXIS6_ROTATES
+#define AXIS6_ROTATES
 #endif
 #ifdef U_DRIVER_TYPE
   #define AXIS7_NAME 'U' // :['U', 'V', 'W']
@@ -249,7 +246,7 @@
   #define SWITCHING_NOZZLE_SERVO_NR 0
   //#define SWITCHING_NOZZLE_E1_SERVO_NR 1          // If two servos are used, the index of the second
   #define SWITCHING_NOZZLE_SERVO_ANGLES { 0, 90 }   // Angles for E0, E1 (single servo) or lowered/raised (dual servo)
-  #define SWITCHING_NOZZLE_SERVO_DWELL 2500         // Dwell time to wait for servo to make physical move
+#define SWITCHING_NOZZLE_SERVO_DWELL 2500         // Dwell time to wait for servo to make physical move
 #endif
 
 // Switch nozzles by bumping the toolhead. Requires EVENT_GCODE_TOOLCHANGE_#.
@@ -275,7 +272,7 @@
 
   #define PARKING_EXTRUDER_PARKING_X { -78, 184 }     // X positions for parking the extruders
   #define PARKING_EXTRUDER_GRAB_DISTANCE 1            // (mm) Distance to move beyond the parking point to grab the extruder
-
+  
   #if ENABLED(PARKING_EXTRUDER)
 
     #define PARKING_EXTRUDER_SOLENOIDS_INVERT           // If enabled, the solenoid is NOT magnetized with applied voltage
@@ -406,7 +403,7 @@
 
   //#define PSU_DEFAULT_OFF               // Keep power off until enabled directly with M80
   //#define PSU_POWERUP_DELAY      250    // (ms) Delay for the PSU to warm up to full power
-  //#define LED_POWEROFF_TIMEOUT 10000    // (ms) Turn off LEDs after power-off, with this amount of delay
+//#define LED_POWEROFF_TIMEOUT 10000    // (ms) Turn off LEDs after power-off, with this amount of delay
 
   //#define POWER_OFF_TIMER               // Enable M81 D<seconds> to power off after a delay
   //#define POWER_OFF_WAIT_FOR_COOLDOWN   // Enable M81 S to power off only after cooldown
@@ -425,7 +422,7 @@
     #define POWER_TIMEOUT              30 // (s) Turn off power if the machine is idle for this duration
     //#define POWER_OFF_DELAY          60 // (s) Delay of poweroff after M81 command. Useful to let fans run for extra time.
   #endif
-  #if ANY(AUTO_POWER_CONTROL, POWER_OFF_WAIT_FOR_COOLDOWN)
+#if ANY(AUTO_POWER_CONTROL, POWER_OFF_WAIT_FOR_COOLDOWN)
     //#define AUTO_POWER_E_TEMP        50 // (°C) PSU on if any extruder is over this temperature
     //#define AUTO_POWER_CHAMBER_TEMP  30 // (°C) PSU on if the chamber is over this temperature
     //#define AUTO_POWER_COOLER_TEMP   26 // (°C) PSU on if the cooler is over this temperature
@@ -492,18 +489,18 @@
  *    52 : 200kΩ ATC Semitec 204GT-2 (1kΩ pullup)
  *    55 : 100kΩ ATC Semitec 104GT-2 - Used in ParCan & J-Head (1kΩ pullup)
  *
- * ================================================================
+* ================================================================
  *  Analog Thermistors - 10kΩ pullup - Atypical
  * ================================================================
  *    99 : 100kΩ Found on some Wanhao i3 machines with a 10kΩ pull-up resistor
  *
- * ================================================================
+* ================================================================
  *  Analog RTDs (Pt100/Pt1000)
  * ================================================================
  *   110 : Pt100  with 1kΩ pullup (atypical)
  *   147 : Pt100  with 4.7kΩ pullup
  *  1010 : Pt1000 with 1kΩ pullup (atypical)
- *  1022 : Pt1000 with 2.2kΩ pullup
+*  1022 : Pt1000 with 2.2kΩ pullup
  *  1047 : Pt1000 with 4.7kΩ pullup (E3D)
  *    20 : Pt100  with circuit in the Ultimainboard V2.x with mainboard ADC reference voltage = INA826 amplifier-board supply voltage.
  *                NOTE: (1) Must use an ADC input with no pullup. (2) Some INA826 amplifiers are unreliable at 3.3V so consider using sensor 147, 110, or 21.
@@ -511,7 +508,7 @@
  *                NOTE: ADC pins are not 5V tolerant. Not recommended because it's possible to damage the CPU by going over 500°C.
  *   201 : Pt100  with circuit in Overlord, similar to Ultimainboard V2.x
  *
- * ================================================================
+* ================================================================
  *  SPI RTD/Thermocouple Boards
  * ================================================================
  *    -5 : MAX31865 with Pt100/Pt1000, 2, 3, or 4-wire  (only for sensors 0-1)
@@ -544,7 +541,7 @@
  *   !!! Use these for Testing or Development purposes. NEVER for production machine. !!!
  *   998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
- */
+  */
 #define TEMP_SENSOR_0 1
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
@@ -568,11 +565,11 @@
 // Resistor values when using MAX31865 sensors (-5) on TEMP_SENSOR_0 / 1
 #if TEMP_SENSOR_IS_MAX_TC(0)
   #define MAX31865_SENSOR_OHMS_0      100 // (Ω) Typically 100 or 1000 (PT100 or PT1000)
-  #define MAX31865_CALIBRATION_OHMS_0 430 // (Ω) Typically 430 for Adafruit PT100; 4300 for Adafruit PT1000
+#define MAX31865_CALIBRATION_OHMS_0 430 // (Ω) Typically 430 for Adafruit PT100; 4300 for Adafruit PT1000
 #endif
 #if TEMP_SENSOR_IS_MAX_TC(1)
   #define MAX31865_SENSOR_OHMS_1      100
-  #define MAX31865_CALIBRATION_OHMS_1 430
+#define MAX31865_CALIBRATION_OHMS_1 430
 #endif
 #if TEMP_SENSOR_IS_MAX_TC(2)
   #define MAX31865_SENSOR_OHMS_2      100
@@ -580,21 +577,21 @@
 #endif
 
 #if HAS_E_TEMP_SENSOR
-  #define TEMP_RESIDENCY_TIME         10  // (seconds) Time to wait for hotend to "settle" in M109
-  #define TEMP_WINDOW                  1  // (°C) Temperature proximity for the "temperature reached" timer
-  #define TEMP_HYSTERESIS              3  // (°C) Temperature proximity considered "close enough" to the target
+#define TEMP_RESIDENCY_TIME         10  // (seconds) Time to wait for hotend to "settle" in M109
+#define TEMP_WINDOW                  1  // (°C) Temperature proximity for the "temperature reached" timer
+#define TEMP_HYSTERESIS              3  // (°C) Temperature proximity considered "close enough" to the target
 #endif
 
 #if TEMP_SENSOR_BED
-  #define TEMP_BED_RESIDENCY_TIME     10  // (seconds) Time to wait for bed to "settle" in M190
-  #define TEMP_BED_WINDOW              1  // (°C) Temperature proximity for the "temperature reached" timer
-  #define TEMP_BED_HYSTERESIS          3  // (°C) Temperature proximity considered "close enough" to the target
+#define TEMP_BED_RESIDENCY_TIME     10  // (seconds) Time to wait for bed to "settle" in M190
+#define TEMP_BED_WINDOW              1  // (°C) Temperature proximity for the "temperature reached" timer
+#define TEMP_BED_HYSTERESIS          3  // (°C) Temperature proximity considered "close enough" to the target
 #endif
 
 #if TEMP_SENSOR_CHAMBER
-  #define TEMP_CHAMBER_RESIDENCY_TIME 10  // (seconds) Time to wait for chamber to "settle" in M191
-  #define TEMP_CHAMBER_WINDOW          1  // (°C) Temperature proximity for the "temperature reached" timer
-  #define TEMP_CHAMBER_HYSTERESIS      3  // (°C) Temperature proximity considered "close enough" to the target
+#define TEMP_CHAMBER_RESIDENCY_TIME 10  // (seconds) Time to wait for chamber to "settle" in M191
+#define TEMP_CHAMBER_WINDOW          1  // (°C) Temperature proximity for the "temperature reached" timer
+#define TEMP_CHAMBER_HYSTERESIS      3  // (°C) Temperature proximity considered "close enough" to the target
 #endif
 
 /**
@@ -753,7 +750,7 @@
 
 /**
  * PID Bed Heating
- *
+  *
  * The PID frequency will be the same as the extruder PWM.
  * If PID_dT is the default, and correct for the hardware/configuration, that means 7.689Hz,
  * which is fine for driving a square wave into a resistive load and does not significantly
@@ -797,7 +794,7 @@
  * impact FET heating. This also works fine on a Fotek SSR-10DA Solid State Relay into a 200W
  * heater. If your configuration is significantly different than this and you don't understand
  * the issues involved, don't use chamber PID until someone else verifies that your hardware works.
- * @section chamber temp
+* @section chamber temp
  */
 //#define PIDTEMPCHAMBER
 //#define CHAMBER_LIMIT_SWITCHING
@@ -826,7 +823,7 @@
 #endif // PIDTEMPCHAMBER
 
 #if ANY(PIDTEMP, PIDTEMPBED, PIDTEMPCHAMBER)
-  //#define PID_OPENLOOP          // Puts PID in open loop. M104/M140 sets the output power from 0 to PID_MAX
+    //#define PID_OPENLOOP          // Puts PID in open loop. M104/M140 sets the output power from 0 to PID_MAX
   //#define SLOW_PWM_HEATERS      // PWM with very low frequency (roughly 0.125Hz=8s) and minimum state time of approximately 1s useful for heaters driven by a relay
   #define PID_FUNCTIONAL_RANGE 10 // If the temperature difference between the target temperature and the actual temperature
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
@@ -1114,7 +1111,7 @@
   //#define ENDSTOPPULLUP_IMIN
   //#define ENDSTOPPULLUP_JMIN
   //#define ENDSTOPPULLUP_KMIN
-  //#define ENDSTOPPULLUP_UMIN
+//#define ENDSTOPPULLUP_UMIN
   //#define ENDSTOPPULLUP_VMIN
   //#define ENDSTOPPULLUP_WMIN
   //#define ENDSTOPPULLUP_XMAX
@@ -1123,7 +1120,7 @@
   //#define ENDSTOPPULLUP_IMAX
   //#define ENDSTOPPULLUP_JMAX
   //#define ENDSTOPPULLUP_KMAX
-  //#define ENDSTOPPULLUP_UMAX
+//#define ENDSTOPPULLUP_UMAX
   //#define ENDSTOPPULLUP_VMAX
   //#define ENDSTOPPULLUP_WMAX
   //#define ENDSTOPPULLUP_ZMIN_PROBE
@@ -1139,7 +1136,7 @@
   //#define ENDSTOPPULLDOWN_IMIN
   //#define ENDSTOPPULLDOWN_JMIN
   //#define ENDSTOPPULLDOWN_KMIN
-  //#define ENDSTOPPULLDOWN_UMIN
+//#define ENDSTOPPULLDOWN_UMIN
   //#define ENDSTOPPULLDOWN_VMIN
   //#define ENDSTOPPULLDOWN_WMIN
   //#define ENDSTOPPULLDOWN_XMAX
@@ -1148,7 +1145,7 @@
   //#define ENDSTOPPULLDOWN_IMAX
   //#define ENDSTOPPULLDOWN_JMAX
   //#define ENDSTOPPULLDOWN_KMAX
-  //#define ENDSTOPPULLDOWN_UMAX
+//#define ENDSTOPPULLDOWN_UMAX
   //#define ENDSTOPPULLDOWN_VMAX
   //#define ENDSTOPPULLDOWN_WMAX
   //#define ENDSTOPPULLDOWN_ZMIN_PROBE
@@ -1224,7 +1221,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }  // Ender Configs
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 500, 670 }  // Ender Configs
 
 #define LIMITED_MAX_STEPS_EDITING
 #if ENABLED(LIMITED_MAX_STEPS_EDITING)
@@ -1236,7 +1233,7 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 10, 45 }
+#define DEFAULT_MAX_FEEDRATE          { 500, 500, 30, 60 }
 
 #define DEFAULT_FEEDRATE_MM_M (50*60)
 
@@ -1251,7 +1248,7 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 500, 500, 100, 1000 }  // Ender Configs
+#define DEFAULT_MAX_ACCELERATION      { 1000, 1000, 500, 3000 }
 
 #define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2  // MRiscoC allows higher limits
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -1266,9 +1263,9 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves  // Ender Configs
-#define DEFAULT_RETRACT_ACCELERATION  800    // E acceleration for retracts  // Ender Configs
-#define DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves  // Ender Configs
+#define DEFAULT_ACCELERATION          1000    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  1000    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk limits (mm/s)
@@ -1282,11 +1279,11 @@
 #if ENABLED(CLASSIC_JERK)
   #define DEFAULT_XJERK 8.0  // Ender Configs
   #define DEFAULT_YJERK 8.0  // Ender Configs
-  #define DEFAULT_ZJERK  0.4  // Ender Configs
+  #define DEFAULT_ZJERK  0.3  // Ender Configs
   //#define DEFAULT_IJERK  0.3
   //#define DEFAULT_JJERK  0.3
   //#define DEFAULT_KJERK  0.3
-  //#define DEFAULT_UJERK  0.3
+//#define DEFAULT_UJERK  0.3
   //#define DEFAULT_VJERK  0.3
   //#define DEFAULT_WJERK  0.3
 
@@ -1388,8 +1385,8 @@
  */
 //#define Z_PROBE_SERVO_NR 0
 #ifdef Z_PROBE_SERVO_NR
-  //#define Z_SERVO_ANGLES { 70, 0 }      // Z Servo Deploy and Stow angles
-  //#define Z_SERVO_MEASURE_ANGLE 45      // Use if the servo must move to a "free" position for measuring after deploy
+//#define Z_SERVO_ANGLES { 70, 0 }      // Z Servo Deploy and Stow angles
+//#define Z_SERVO_MEASURE_ANGLE 45      // Use if the servo must move to a "free" position for measuring after deploy
   //#define Z_SERVO_INTERMEDIATE_STOW     // Stow the probe between points
   //#define Z_SERVO_DEACTIVATE_AFTER_STOW // Deactivate the servo when probe is stowed
 #endif
@@ -1549,7 +1546,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -41.5, -7, 0 }  // MRiscoC BLTouch offset for support: https://www.thingiverse.com/thing:4605354 (z-offset = -1.80 mm)
+#define NOZZLE_TO_PROBE_OFFSET { 36, 0, 0 }  // MRiscoC BLTouch offset for support: https://www.thingiverse.com/thing:4605354 (z-offset = -1.80 mm)
 
 // Enable and set to use a specific tool for probing. Disable to allow any tool.
 #define PROBING_TOOL 0
@@ -1725,7 +1722,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
+#define INVERT_E0_DIR true
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -1737,7 +1734,7 @@
 // @section homing
 
 //#define NO_MOTION_BEFORE_HOMING // Inhibit movement until all axes have been homed. Also enable HOME_AFTER_DEACTIVATE for extra safety.
-#define HOME_AFTER_DEACTIVATE   // Require rehoming after steppers are deactivated. Also enable NO_MOTION_BEFORE_HOMING for extra safety.  // MRiscoC Enabled for safety
+#define HOME_AFTER_DEACTIVATE   // Require rehoming after steppers are deactivated. Also enable NO_MOTION_BEFORE_HOMING for extra safety.
 
 /**
  * Set Z_IDLE_HEIGHT if the Z-Axis moves on its own when steppers are disabled.
@@ -1747,7 +1744,7 @@
 //#define Z_IDLE_HEIGHT Z_HOME_POS
 
 //#define Z_CLEARANCE_FOR_HOMING  10 // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...  // MRiscoC Crearance over the bed
-                                    // Be sure to have this much clearance over your Z_MAX_POS to prevent grinding.
+                                  // Be sure to have this much clearance over your Z_MAX_POS to prevent grinding.
 
 //#define Z_AFTER_HOMING         5 // (mm) Height to move to after homing (if Z was homed)  // MRiscoC Crearance over the bed
 
@@ -1781,12 +1778,12 @@
 // @section geometry
 
 // The size of the printable area
-#define X_BED_SIZE 230  // MRiscoC Max usable bed size
-#define Y_BED_SIZE 230  // MRiscoC Max usable bed size
+#define X_BED_SIZE 230
+#define Y_BED_SIZE 230
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
-#define X_MIN_POS 0  // MRiscoC Stock physical limit
-#define Y_MIN_POS 0  // MRiscoC Stock physical limit
+#define X_MIN_POS -20  // MRiscoC Stock physical limit
+#define Y_MIN_POS -7  // MRiscoC Stock physical limit
 #define Z_MIN_POS 0
 #define X_MAX_POS 248  // MRiscoC Stock physical limit
 #define Y_MAX_POS 231  // MRiscoC Stock physical limit
@@ -1822,7 +1819,7 @@
   #define MIN_SOFTWARE_ENDSTOP_I
   #define MIN_SOFTWARE_ENDSTOP_J
   #define MIN_SOFTWARE_ENDSTOP_K
-  #define MIN_SOFTWARE_ENDSTOP_U
+#define MIN_SOFTWARE_ENDSTOP_U
   #define MIN_SOFTWARE_ENDSTOP_V
   #define MIN_SOFTWARE_ENDSTOP_W
 #endif
@@ -1836,7 +1833,7 @@
   #define MAX_SOFTWARE_ENDSTOP_I
   #define MAX_SOFTWARE_ENDSTOP_J
   #define MAX_SOFTWARE_ENDSTOP_K
-  #define MAX_SOFTWARE_ENDSTOP_U
+#define MAX_SOFTWARE_ENDSTOP_U
   #define MAX_SOFTWARE_ENDSTOP_V
   #define MAX_SOFTWARE_ENDSTOP_W
 #endif
@@ -2046,9 +2043,9 @@
 #if ANY(MESH_BED_LEVELING, AUTO_BED_LEVELING_BILINEAR, AUTO_BED_LEVELING_UBL)
   /**
    * Gradually reduce leveling correction until a set height is reached,
-   * at which point movement will be level to the machine's XY plane.
-   * The height can be set with M420 Z<height>
-   */
+  * at which point movement will be level to the machine's XY plane.
+  * The height can be set with M420 Z<height>
+*/
   #define ENABLE_LEVELING_FADE_HEIGHT
   #if ENABLED(ENABLE_LEVELING_FADE_HEIGHT)
     #define DEFAULT_LEVELING_FADE_HEIGHT 10.0 // (mm) Default fade height.
@@ -2056,9 +2053,9 @@
 
   /**
    * For Cartesian machines, instead of dividing moves on mesh boundaries,
-   * split up moves into short segments like a Delta. This follows the
-   * contours of the bed more closely than edge-to-edge straight moves.
-   */
+  * split up moves into short segments like a Delta. This follows the
+  * contours of the bed more closely than edge-to-edge straight moves.
+*/
   #define SEGMENT_LEVELED_MOVES
   #define LEVELED_SEGMENT_LENGTH 5.0 // (mm) Length of all segments (except the last one)
 
@@ -2130,7 +2127,7 @@
 
   //#define UBL_MESH_WIZARD         // Run several commands in a row to get a complete mesh
 
-  /**
+/**
    * Probing not allowed within the position of an obstacle.
    */
   //#define AVOID_OBSTACLES
@@ -2245,11 +2242,11 @@
 #if ENABLED(Z_SAFE_HOMING)
   #define Z_SAFE_HOMING_X_POINT X_CENTER  // X point for Z homing
   #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // Y point for Z homing
-  //#define Z_SAFE_HOMING_POINT_ABSOLUTE  // Ignore home offsets (M206) for Z homing position
+//#define Z_SAFE_HOMING_POINT_ABSOLUTE  // Ignore home offsets (M206) for Z homing position
 #endif
 
 // Homing speeds (linear=mm/min, rotational=°/min)
-#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (10*60) }  // MRiscoC Homing speed-up
+#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (25*60) }  // MRiscoC Homing speed-up
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
@@ -2302,7 +2299,7 @@
     #define YZ_DIAG_AC 282.8427124746
     #define YZ_DIAG_BD 282.8427124746
     #define YZ_SIDE_AD 200
-
+    
     // Or, set the Z skew factors directly:
     //#define XZ_SKEW_FACTOR 0.0
     //#define YZ_SKEW_FACTOR 0.0
@@ -2368,7 +2365,7 @@
 #define PREHEAT_1_LABEL       "PLA"
 #define PREHEAT_1_TEMP_HOTEND 195
 #define PREHEAT_1_TEMP_BED     60
-#define PREHEAT_1_TEMP_CHAMBER 35
+//#define PREHEAT_1_TEMP_CHAMBER 35
 #define PREHEAT_1_FAN_SPEED     128 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "ABS"
@@ -2379,15 +2376,13 @@
 
 #define PREHEAT_3_LABEL       "PETG"
 #define PREHEAT_3_TEMP_HOTEND 230
-#define PREHEAT_3_TEMP_BED     80
-#define PREHEAT_3_FAN_SPEED   128
+#define PREHEAT_3_TEMP_BED     70
+#define PREHEAT_3_FAN_SPEED   128 // Value from 0 to 255
 
-#define PREHEAT_4_LABEL       "CUSTOM"
-#define PREHEAT_4_TEMP_HOTEND 190
-#define PREHEAT_4_TEMP_BED     50
-#define PREHEAT_4_FAN_SPEED   128
-
-// @section motion
+//#define PREHEAT_4_LABEL       "TPU"
+//#define PREHEAT_4_TEMP_HOTEND 230
+//#define PREHEAT_4_TEMP_BED     60
+//#define PREHEAT_4_FAN_SPEED   255 // Value from 0 to 255
 
 /**
  * Nozzle Park
@@ -2400,7 +2395,7 @@
  *    P1  Raise the nozzle always to Z-park height.
  *    P2  Raise the nozzle by Z-park amount, limited to Z_MAX_POS.
  */
-#define NOZZLE_PARK_FEATURE  // MRiscoC Enabled
+#define NOZZLE_PARK_FEATURE
 
 #if ENABLED(NOZZLE_PARK_FEATURE)
   // Specify a park position as { X, Y, Z_raise }
@@ -2446,7 +2441,7 @@
  *       Before starting, the nozzle moves to NOZZLE_CLEAN_START_POINT.
  *
  *   Caveats: The ending Z should be the same as starting Z.
- */
+  */
 //#define NOZZLE_CLEAN_FEATURE
 
 #if ENABLED(NOZZLE_CLEAN_FEATURE)
@@ -2469,9 +2464,9 @@
   #define NOZZLE_CLEAN_END_POINT   { { 100, 60, (Z_MIN_POS + 1) } }
 
   #if ENABLED(NOZZLE_CLEAN_PATTERN_CIRCLE)
-    #define NOZZLE_CLEAN_CIRCLE_RADIUS 6.5                      // (mm) Circular pattern radius
-    #define NOZZLE_CLEAN_CIRCLE_FN 10                           // Circular pattern circle number of segments
-    #define NOZZLE_CLEAN_CIRCLE_MIDDLE NOZZLE_CLEAN_START_POINT // Middle point of circle
+  #define NOZZLE_CLEAN_CIRCLE_RADIUS 6.5                      // (mm) Circular pattern radius
+  #define NOZZLE_CLEAN_CIRCLE_FN 10                           // Circular pattern circle number of segments
+  #define NOZZLE_CLEAN_CIRCLE_MIDDLE NOZZLE_CLEAN_START_POINT // Middle point of circle
   #endif
 
   // Move the nozzle to the initial position after cleaning
@@ -3117,30 +3112,30 @@
 
 /**
  * DGUS Touch Display with DWIN OS. (Choose one.)
- *
+*
  * ORIGIN (Marlin DWIN_SET)
- *  - Download https://github.com/coldtobi/Marlin_DGUS_Resources
- *  - Copy the downloaded DWIN_SET folder to the SD card.
- *  - Product: https://www.aliexpress.com/item/32993409517.html
+*  - Download https://github.com/coldtobi/Marlin_DGUS_Resources
+*  - Copy the downloaded DWIN_SET folder to the SD card.
+*  - Product: https://www.aliexpress.com/item/32993409517.html
  *
  * FYSETC (Supplier default)
- *  - Download https://github.com/FYSETC/FYSTLCD-2.0
- *  - Copy the downloaded SCREEN folder to the SD card.
- *  - Product: https://www.aliexpress.com/item/32961471929.html
+*  - Download https://github.com/FYSETC/FYSTLCD-2.0
+*  - Copy the downloaded SCREEN folder to the SD card.
+*  - Product: https://www.aliexpress.com/item/32961471929.html
  *
  * HIPRECY (Supplier default)
- *  - Download https://github.com/HiPrecy/Touch-Lcd-LEO
- *  - Copy the downloaded DWIN_SET folder to the SD card.
- *
+*  - Download https://github.com/HiPrecy/Touch-Lcd-LEO
+*  - Copy the downloaded DWIN_SET folder to the SD card.
+*
  * MKS (MKS-H43) (Supplier default)
- *  - Download https://github.com/makerbase-mks/MKS-H43
- *  - Copy the downloaded DWIN_SET folder to the SD card.
- *  - Product: https://www.aliexpress.com/item/1005002008179262.html
+*  - Download https://github.com/makerbase-mks/MKS-H43
+*  - Copy the downloaded DWIN_SET folder to the SD card.
+*  - Product: https://www.aliexpress.com/item/1005002008179262.html
  *
  * RELOADED (T5UID1)
  *  - Download https://github.com/Neo2003/DGUS-reloaded/releases
- *  - Copy the downloaded DWIN_SET folder to the SD card.
- *
+*  - Copy the downloaded DWIN_SET folder to the SD card.
+*
  * IA_CREALITY (T5UID1)
  *  - Download https://github.com/InsanityAutomation/Marlin/raw/CrealityDwin_2.0/TM3D_Combined480272_Landscape_V7.7z
  *  - Copy the downloaded DWIN_SET folder to the SD card.
@@ -3179,6 +3174,7 @@
 //
 // Touch-screen LCD for Anycubic Chiron
 //
+//#define ANYCUBIC_LCD_I3MEGA
 //#define ANYCUBIC_LCD_CHIRON
 
 //
@@ -3518,10 +3514,10 @@
  *  LED Strips require a MOSFET Chip between PWM lines and LEDs,
  *  as the Arduino cannot handle the current the LEDs will require.
  *  Failure to follow this precaution can destroy your Arduino!
- *
+*
  *  NOTE: A separate 5V power supply is required! The NeoPixel LED needs
  *  more current than the Arduino 5V linear regulator can produce.
- *
+  *
  *  Requires PWM frequency between 50 <> 100Hz (Check HAL or variant)
  *  Use FAST_PWM_FAN, if possible, to reduce fan noise.
  */
@@ -3563,7 +3559,7 @@
     #define NEOPIXEL2_PIXELS           15 // Number of LEDs in the second strip
     #define NEOPIXEL2_BRIGHTNESS      127 // Initial brightness (0-255)
     #define NEOPIXEL2_STARTUP_TEST        // Cycle through colors at startup
-    #define NEOPIXEL_M150_DEFAULT      -1 // Default strip for M150 without 'S'. Use -1 to set all by default.
+#define NEOPIXEL_M150_DEFAULT      -1 // Default strip for M150 without 'S'. Use -1 to set all by default.
   #else
     //#define NEOPIXEL2_INSERIES          // Default behavior is NeoPixel 2 in parallel
   #endif

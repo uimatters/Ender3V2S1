@@ -21,9 +21,6 @@
  */
 #pragma once
 
-// Created by configs generator for Professional firmware
-// https://github.com/mriscoc/Ender3V2S1
-
 /**
  * Configuration_adv.h
  *
@@ -78,98 +75,98 @@
   #define HOTEND0_PULLUP_RESISTOR_OHMS    4700 // Pullup resistor
   #define HOTEND0_RESISTANCE_25C_OHMS   100000 // Resistance at 25C
   #define HOTEND0_BETA                    3950 // Beta value
-  #define HOTEND0_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
+#define HOTEND0_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_1 == 1000
   #define HOTEND1_PULLUP_RESISTOR_OHMS    4700 // Pullup resistor
   #define HOTEND1_RESISTANCE_25C_OHMS   100000 // Resistance at 25C
   #define HOTEND1_BETA                    3950 // Beta value
-  #define HOTEND1_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
+#define HOTEND1_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_2 == 1000
   #define HOTEND2_PULLUP_RESISTOR_OHMS    4700 // Pullup resistor
   #define HOTEND2_RESISTANCE_25C_OHMS   100000 // Resistance at 25C
   #define HOTEND2_BETA                    3950 // Beta value
-  #define HOTEND2_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
+#define HOTEND2_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_3 == 1000
   #define HOTEND3_PULLUP_RESISTOR_OHMS    4700 // Pullup resistor
   #define HOTEND3_RESISTANCE_25C_OHMS   100000 // Resistance at 25C
   #define HOTEND3_BETA                    3950 // Beta value
-  #define HOTEND3_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
+#define HOTEND3_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_4 == 1000
   #define HOTEND4_PULLUP_RESISTOR_OHMS    4700 // Pullup resistor
   #define HOTEND4_RESISTANCE_25C_OHMS   100000 // Resistance at 25C
   #define HOTEND4_BETA                    3950 // Beta value
-  #define HOTEND4_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
+#define HOTEND4_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_5 == 1000
   #define HOTEND5_PULLUP_RESISTOR_OHMS    4700 // Pullup resistor
   #define HOTEND5_RESISTANCE_25C_OHMS   100000 // Resistance at 25C
   #define HOTEND5_BETA                    3950 // Beta value
-  #define HOTEND5_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
+#define HOTEND5_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_6 == 1000
   #define HOTEND6_PULLUP_RESISTOR_OHMS    4700 // Pullup resistor
   #define HOTEND6_RESISTANCE_25C_OHMS   100000 // Resistance at 25C
   #define HOTEND6_BETA                    3950 // Beta value
-  #define HOTEND6_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
+#define HOTEND6_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_7 == 1000
   #define HOTEND7_PULLUP_RESISTOR_OHMS    4700 // Pullup resistor
   #define HOTEND7_RESISTANCE_25C_OHMS   100000 // Resistance at 25C
   #define HOTEND7_BETA                    3950 // Beta value
-  #define HOTEND7_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
+#define HOTEND7_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_BED == 1000
   #define BED_PULLUP_RESISTOR_OHMS        4700 // Pullup resistor
   #define BED_RESISTANCE_25C_OHMS       100000 // Resistance at 25C
   #define BED_BETA                        3950 // Beta value
-  #define BED_SH_C_COEFF                     0 // Steinhart-Hart C coefficient
+#define BED_SH_C_COEFF                     0 // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_CHAMBER == 1000
   #define CHAMBER_PULLUP_RESISTOR_OHMS    4700 // Pullup resistor
   #define CHAMBER_RESISTANCE_25C_OHMS   100000 // Resistance at 25C
   #define CHAMBER_BETA                    3950 // Beta value
-  #define CHAMBER_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
+#define CHAMBER_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_COOLER == 1000
   #define COOLER_PULLUP_RESISTOR_OHMS     4700 // Pullup resistor
   #define COOLER_RESISTANCE_25C_OHMS    100000 // Resistance at 25C
   #define COOLER_BETA                     3950 // Beta value
-  #define COOLER_SH_C_COEFF                  0 // Steinhart-Hart C coefficient
+#define COOLER_SH_C_COEFF                  0 // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_PROBE == 1000
   #define PROBE_PULLUP_RESISTOR_OHMS      4700 // Pullup resistor
   #define PROBE_RESISTANCE_25C_OHMS     100000 // Resistance at 25C
   #define PROBE_BETA                      3950 // Beta value
-  #define PROBE_SH_C_COEFF                   0 // Steinhart-Hart C coefficient
+#define PROBE_SH_C_COEFF                   0 // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_BOARD == 1000
   #define BOARD_PULLUP_RESISTOR_OHMS      4700 // Pullup resistor
   #define BOARD_RESISTANCE_25C_OHMS     100000 // Resistance at 25C
   #define BOARD_BETA                      3950 // Beta value
-  #define BOARD_SH_C_COEFF                   0 // Steinhart-Hart C coefficient
+#define BOARD_SH_C_COEFF                   0 // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_REDUNDANT == 1000
   #define REDUNDANT_PULLUP_RESISTOR_OHMS  4700 // Pullup resistor
   #define REDUNDANT_RESISTANCE_25C_OHMS 100000 // Resistance at 25C
   #define REDUNDANT_BETA                  3950 // Beta value
-  #define REDUNDANT_SH_C_COEFF               0 // Steinhart-Hart C coefficient
+#define REDUNDANT_SH_C_COEFF               0 // Steinhart-Hart C coefficient
 #endif
 
 /**
@@ -197,7 +194,7 @@
  */
 //#define HEPHESTOS2_HEATED_BED_KIT
 #if ENABLED(HEPHESTOS2_HEATED_BED_KIT)
-  #define HEATER_BED_INVERTING true
+    #define HEATER_BED_INVERTING true
 #endif
 
 //
@@ -523,10 +520,10 @@
 
 /**
  * The number of milliseconds a hotend will preheat before starting to check
- * the temperature. This value should NOT be set to the time it takes the
- * hot end to reach the target temperature, but the time it takes to reach
- * the minimum temperature your thermistor can read. The lower the better/safer.
- * This shouldn't need to be more than 30 seconds (30000)
+* the temperature. This value should NOT be set to the time it takes the
+* hot end to reach the target temperature, but the time it takes to reach
+* the minimum temperature your thermistor can read. The lower the better/safer.
+* This shouldn't need to be more than 30 seconds (30000)
  */
 //#define PREHEAT_TIME_HOTEND_MS 0
 //#define PREHEAT_TIME_BED_MS 0
@@ -535,9 +532,9 @@
 
 /**
  * Extruder runout prevention.
- * If the machine is idle and the temperature over MINTEMP
- * then extrude some filament every couple of SECONDS.
- */
+* If the machine is idle and the temperature over MINTEMP
+* then extrude some filament every couple of SECONDS.
+*/
 //#define EXTRUDER_RUNOUT_PREVENT
 #if ENABLED(EXTRUDER_RUNOUT_PREVENT)
   #define EXTRUDER_RUNOUT_MINTEMP 190
@@ -577,7 +574,7 @@
 //#define USE_CONTROLLER_FAN
 #if ENABLED(USE_CONTROLLER_FAN)
   //#define CONTROLLER_FAN_PIN -1           // Set a custom pin for the controller fan
-  //#define CONTROLLER_FAN2_PIN -1          // Set a custom pin for second controller fan
+//#define CONTROLLER_FAN2_PIN -1          // Set a custom pin for second controller fan
   //#define CONTROLLER_FAN_USE_Z_ONLY       // With this option only the Z axis is considered
   //#define CONTROLLER_FAN_IGNORE_Z         // Ignore Z stepper. Useful when stepper timeout is disabled.
   #define CONTROLLERFAN_SPEED_MIN         0 // (0-255) Minimum speed. (If set below this value the fan is turned off.)
@@ -639,7 +636,7 @@
  *   and not to complete it when users are not aware that the frequency must be specifically set to support the target board.
  *
  *   NOTE: Setting very low frequencies (< 10 Hz) may result in unexpected timer behavior.
- *         Setting very high frequencies can damage your hardware.
+*         Setting very high frequencies can damage your hardware.
  *
  * USE_OCR2A_AS_TOP [undefined by default]
  *   Boards that use TIMER2 for PWM have limitations resulting in only a few possible frequencies on TIMER2:
@@ -653,7 +650,7 @@
 #if ENABLED(FAST_PWM_FAN)
   //#define FAST_PWM_FAN_FREQUENCY 31400  // Define here to override the defaults below
   //#define USE_OCR2A_AS_TOP
-  #ifndef FAST_PWM_FAN_FREQUENCY
+#ifndef FAST_PWM_FAN_FREQUENCY
     #ifdef __AVR__
       #define FAST_PWM_FAN_FREQUENCY ((F_CPU) / (2 * 255 * 1))
     #else
@@ -822,9 +819,9 @@
   #define X2_MIN_POS    80        // A min coordinate so the X2 carriage can't hit the parked X1 carriage
   #define X2_MAX_POS   353        // The max position of the X2 carriage, typically also the home position
   #define X2_HOME_POS X2_MAX_POS  // Default X2 home position. Set to X2_MAX_POS.
-                                  // NOTE: For Dual X Carriage use M218 T1 Xn to override the X2_HOME_POS.
+                      // NOTE: For Dual X Carriage use M218 T1 Xn to override the X2_HOME_POS.
                                   // This allows recalibration of endstops distance without a rebuild.
-                                  // Remember to set the second extruder's X-offset to 0 in your slicer.
+                      // Remember to set the second extruder's X-offset to 0 in your slicer.
 
   // This is the default power-up mode which can be changed later using M605 S<mode>.
   #define DEFAULT_DUAL_X_CARRIAGE_MODE DXC_AUTO_PARK_MODE
@@ -1020,9 +1017,9 @@
 #if ENABLED(Z_STEPPER_AUTO_ALIGN)
   /**
    * Define probe X and Y positions for Z1, Z2 [, Z3 [, Z4]]
-   * These positions are machine-relative and do not shift with the M206 home offset!
+  * These positions are machine-relative and do not shift with the M206 home offset!
    * If not defined, probe limits will be used.
-   * Override with 'M422 S<index> X<pos> Y<pos>'.
+  * Override with 'M422 S<index> X<pos> Y<pos>'.
    */
   //#define Z_STEPPER_ALIGN_XY { {  10, 190 }, { 100,  10 }, { 190, 190 } }
 
@@ -1051,12 +1048,12 @@
 
   /**
    * Z Stepper positions for more rapid convergence in bed alignment.
-   * Requires 3 or 4 Z steppers.
+  * Requires 3 or 4 Z steppers.
    *
    * Define Stepper XY positions for Z1, Z2, Z3... corresponding to the screw
    * positions in the bed carriage, with one position per Z stepper in stepper
    * driver order.
-   */
+    */
   //#define Z_STEPPER_ALIGN_STEPPER_XY { { 210.7, 102.5 }, { 152.6, 220.0 }, { 94.5, 102.5 } }
 
   #ifndef Z_STEPPER_ALIGN_STEPPER_XY
@@ -1343,7 +1340,7 @@
   //#define CALIBRATION_MEASURE_JMAX
   //#define CALIBRATION_MEASURE_KMIN
   //#define CALIBRATION_MEASURE_KMAX
-  //#define CALIBRATION_MEASURE_UMIN
+//#define CALIBRATION_MEASURE_UMIN
   //#define CALIBRATION_MEASURE_UMAX
   //#define CALIBRATION_MEASURE_VMIN
   //#define CALIBRATION_MEASURE_VMAX
@@ -1478,19 +1475,19 @@
 //
 #define LCD_BACKLIGHT_TIMEOUT_MINS 5  // (minutes) Timeout before turning off the backlight
 
-#if HAS_BED_PROBE && ANY(HAS_MARLINUI_MENU, HAS_TFT_LVGL_UI)
-  //#define PROBE_OFFSET_WIZARD       // Add a Probe Z Offset calibration option to the LCD menu
-  #if ENABLED(PROBE_OFFSET_WIZARD)
-    /**
+  #if HAS_BED_PROBE && ANY(HAS_MARLINUI_MENU, HAS_TFT_LVGL_UI)
+    //#define PROBE_OFFSET_WIZARD       // Add a Probe Z Offset calibration option to the LCD menu
+    #if ENABLED(PROBE_OFFSET_WIZARD)
+      /**
      * Enable to init the Probe Z-Offset when starting the Wizard.
-     * Use a height slightly above the estimated nozzle-to-probe Z offset.
-     * For example, with an offset of -5, consider a starting height of -4.
-     */
-    //#define PROBE_OFFSET_WIZARD_START_Z -4.0
+      * Use a height slightly above the estimated nozzle-to-probe Z offset.
+      * For example, with an offset of -5, consider a starting height of -4.
+      */
+      //#define PROBE_OFFSET_WIZARD_START_Z -4.0
 
-    // Set a convenient position to do the calibration (probing point and nozzle/bed-distance)
-    //#define PROBE_OFFSET_WIZARD_XY_POS { X_CENTER, Y_CENTER }
-  #endif
+      // Set a convenient position to do the calibration (probing point and nozzle/bed-distance)
+      //#define PROBE_OFFSET_WIZARD_XY_POS { X_CENTER, Y_CENTER }
+    #endif
 #endif
 
 #if HAS_MARLINUI_MENU
@@ -1610,7 +1607,7 @@
     #endif
   #endif
 
-#endif // HAS_DISPLAY
+  #endif // HAS_DISPLAY
 
 // Add 'M73' to set print job progress, overrides Marlin's built-in estimate
 #define SET_PROGRESS_MANUALLY  // MRiscoC, Allows display feedback of host printing through GCode M73
@@ -1621,18 +1618,18 @@
   //#define M73_REPORT                    // Report M73 values to host
   #if ALL(M73_REPORT, HAS_MEDIA)
     #define M73_REPORT_SD_ONLY            // Report only when printing from SD
+    #endif
   #endif
-#endif
 
-// LCD Print Progress options. Multiple times may be displayed in turn.
+  // LCD Print Progress options. Multiple times may be displayed in turn.
 #if HAS_DISPLAY && ANY(HAS_MEDIA, SET_PROGRESS_MANUALLY)
   #define SHOW_PROGRESS_PERCENT           // Show print progress percentage (doesn't affect progress bar)
   #define SHOW_ELAPSED_TIME               // Display elapsed printing time (prefix 'E')
   #define SHOW_REMAINING_TIME           // Display estimated time to completion (prefix 'R')  // MRiscoC, Allows display remaining printing time
   #if ENABLED(SET_INTERACTION_TIME)
     #define SHOW_INTERACTION_TIME         // Display time until next user interaction ('C' = filament change)
-  #endif
-  //#define PRINT_PROGRESS_SHOW_DECIMALS  // Show/report progress with decimal digits, not all UIs support this
+#endif
+//#define PRINT_PROGRESS_SHOW_DECIMALS  // Show/report progress with decimal digits, not all UIs support this
 
   #if ANY(HAS_MARLINUI_HD44780, IS_TFTGLCD_PANEL)
     //#define LCD_PROGRESS_BAR            // Show a progress bar on HD44780 LCDs for SD printing
@@ -1779,7 +1776,7 @@
    * Endstops must be activated for this option to work.
    */
   //#define SD_ABORT_ON_ENDSTOP_HIT
-  #if ENABLED(SD_ABORT_ON_ENDSTOP_HIT)
+#if ENABLED(SD_ABORT_ON_ENDSTOP_HIT)
     //#define SD_ABORT_ON_ENDSTOP_HIT_GCODE "G28XY" // G-code to run on endstop hit (e.g., "G28XY" or "G27")
   #endif
 
@@ -1877,7 +1874,7 @@
 
   /**
    * Multiple volume support - EXPERIMENTAL.
-   * Adds 'M21 Pm' / 'M21 S' / 'M21 U' to mount SD Card / USB Drive.
+* Adds 'M21 Pm' / 'M21 S' / 'M21 U' to mount SD Card / USB Drive.
    */
   //#define MULTI_VOLUME
   #if ENABLED(MULTI_VOLUME)
@@ -1987,13 +1984,13 @@
 #if HAS_MARLINUI_U8GLIB || IS_DWIN_MARLINUI
   #define MENU_HOLLOW_FRAME           // Enable to save many cycles by drawing a hollow frame on Menu Screens
   //#define OVERLAY_GFX_REVERSE       // Swap the CW/CCW indicators in the graphics overlay
-#endif
+  #endif
 
 //
 // Additional options for DGUS / DWIN displays
 //
 #if HAS_DGUS_LCD
-  #define LCD_BAUDRATE 115200
+    #define LCD_BAUDRATE 115200
 
   #define DGUS_RX_BUFFER_SIZE 128
   #define DGUS_TX_BUFFER_SIZE 48
@@ -2407,7 +2404,6 @@
     #define PTC_PARK_POS   { 0, 0, 100 }
 
     // Probe position to probe and wait for probe to reach target temperature
-    //#define PTC_PROBE_POS  { 12.0f, 7.3f } // Example: MK52 magnetic heatbed
     #define PTC_PROBE_POS  { 90, 100 }
 
     // The temperature the probe should be at while taking measurements during
@@ -2670,7 +2666,7 @@
   #endif
   #define RETRACT_LENGTH                5   // (mm) Default retract length (positive value)  // MRiscoC Bowden
   #define RETRACT_LENGTH_SWAP          13   // (mm) Default swap retract length (positive value)
-  #define RETRACT_FEEDRATE             40   // (mm/s) Default feedrate for retracting  // MRiscoC Bowden
+  #define RETRACT_FEEDRATE             45   // (mm/s) Default feedrate for retracting  // MRiscoC Bowden
   #define RETRACT_ZRAISE                0.2   // (mm) Default retract Z-raise  // MRiscoC Bowden
   #define RETRACT_RECOVER_LENGTH        0   // (mm) Default additional recover length (added to retract length on recover)
   #define RETRACT_RECOVER_LENGTH_SWAP   0   // (mm) Default additional swap recover length (added to retract length on recover from toolchange)
@@ -3178,17 +3174,17 @@
    * Use Trinamic's ultra quiet stepping mode.
    * When disabled, Marlin will use spreadCycle stepping mode.
    */
-  #if HAS_STEALTHCHOP
-    #define STEALTHCHOP_XY
-    #define STEALTHCHOP_Z
-    #define STEALTHCHOP_I
-    #define STEALTHCHOP_J
-    #define STEALTHCHOP_K
-    #define STEALTHCHOP_U
-    #define STEALTHCHOP_V
-    #define STEALTHCHOP_W
-    #define STEALTHCHOP_E
-  #endif
+#if HAS_STEALTHCHOP
+  #define STEALTHCHOP_XY
+  #define STEALTHCHOP_Z
+  #define STEALTHCHOP_I
+  #define STEALTHCHOP_J
+  #define STEALTHCHOP_K
+  #define STEALTHCHOP_U
+  #define STEALTHCHOP_V
+  #define STEALTHCHOP_W
+  #define STEALTHCHOP_E
+#endif
 
   /**
    * Optimize spreadCycle chopper parameters by using predefined parameter sets
@@ -3308,7 +3304,7 @@
    * homing and adds a guard period for endstop triggering.
    *
    * Comment *_STALL_SENSITIVITY to disable sensorless homing for that axis.
-   * @section tmc/stallguard
+* @section tmc/stallguard
    */
   //#define SENSORLESS_HOMING // StallGuard capable drivers only
 
@@ -3482,7 +3478,7 @@
   #if ENABLED(SPINDLE_LASER_USE_PWM)
     #define SPINDLE_LASER_PWM_INVERT    false  // Set to "true" if the speed/power goes up when you want it to go slower
     #define SPINDLE_LASER_FREQUENCY     2500   // (Hz) Spindle/laser frequency (only on supported HALs: AVR, ESP32, and LPC)
-                                               // ESP32: If SPINDLE_LASER_PWM_PIN is onboard then <=78125Hz. For I2S expander
+// ESP32: If SPINDLE_LASER_PWM_PIN is onboard then <=78125Hz. For I2S expander
                                                //  the frequency determines the PWM resolution. 2500Hz = 0-100, 977Hz = 0-255, ...
                                                //  (250000 / SPINDLE_LASER_FREQUENCY) = max value.
   #endif
@@ -3574,11 +3570,11 @@
     */
     #define LASER_SAFETY_TIMEOUT_MS     1000   // (ms)
 
-    /**
-     * Any M3 or G1/2/3/5 command with the 'I' parameter enables continuous inline power mode.
-     *
-     * e.g., 'M3 I' enables continuous inline power which is processed by the planner.
-     * Power is stored in move blocks and applied when blocks are processed by the Stepper ISR.
+      /**
+       * Any M3 or G1/2/3/5 command with the 'I' parameter enables continuous inline power mode.
+       *
+       * e.g., 'M3 I' enables continuous inline power which is processed by the planner.
+       * Power is stored in move blocks and applied when blocks are processed by the Stepper ISR.
      *
      * 'M4 I' sets dynamic mode which uses the current feedrate to calculate a laser power OCR value.
      *
@@ -3591,22 +3587,22 @@
      * M5 I clears inline mode and set power to 0, M5 sets the power output to 0 but leaves inline mode on.
      */
 
-    /**
-     * Enable M3 commands for laser mode inline power planner syncing.
+      /**
+       * Enable M3 commands for laser mode inline power planner syncing.
      * This feature enables any M3 S-value to be injected into the block buffers while in
      * CUTTER_MODE_CONTINUOUS. The option allows M3 laser power to be committed without waiting
      * for a planner synchronization
      */
-    //#define LASER_POWER_SYNC
+      //#define LASER_POWER_SYNC
 
-    /**
-     * Scale the laser's power in proportion to the movement rate.
+      /**
+       * Scale the laser's power in proportion to the movement rate.
      *
      * - Sets the entry power proportional to the entry speed over the nominal speed.
      * - Ramps the power up every N steps to approximate the speed trapezoid.
      * - Due to the limited power resolution this is only approximate.
      */
-    //#define LASER_POWER_TRAP
+      //#define LASER_POWER_TRAP
 
     //
     // Laser I2C Ammeter (High precision INA226 low/high side module)
@@ -3617,7 +3613,7 @@
       #define I2C_AMMETER_SHUNT_RESISTOR  0.1    // (Ohms) Calibration shunt resistor value
     #endif
 
-    //
+//
     // Laser Coolant Flow Meter
     //
     //#define LASER_COOLANT_FLOW_METER
@@ -4016,7 +4012,7 @@
     //#define HOST_STATUS_NOTIFICATIONS   // Send some status messages to the host as notifications
   #endif
   //#define HOST_START_MENU_ITEM          // Add a menu item that tells the host to start
-  //#define HOST_SHUTDOWN_MENU_ITEM       // Add a menu item that tells the host to shut down
+//#define HOST_SHUTDOWN_MENU_ITEM       // Add a menu item that tells the host to shut down
 #endif
 
 // @section extras
@@ -4042,7 +4038,7 @@
  * Alternative Supplier: https://reliabuild3d.com/
  *
  * Reliabuild encoders have been modified to improve reliability.
- * @section i2c encoders
+* @section i2c encoders
  */
 
 //#define I2C_POSITION_ENCODERS
@@ -4114,7 +4110,7 @@
 
 /**
  * Analog Joystick(s)
- * @section joystick
+* @section joystick
  */
 //#define JOYSTICK
 #if ENABLED(JOYSTICK)
@@ -4139,7 +4135,7 @@
  * Modern replacement for the Průša TMC_Z_CALIBRATION.
  * Adds capability to work with any adjustable current drivers.
  * Implemented as G34 because M915 is deprecated.
- * @section calibrate
+* @section calibrate
  */
 //#define MECHANICAL_GANTRY_CALIBRATION
 #if ENABLED(MECHANICAL_GANTRY_CALIBRATION)
@@ -4156,13 +4152,13 @@
 
 /**
  * Instant freeze / unfreeze functionality
- * Potentially useful for emergency stop that allows being resumed.
- * @section interface
+  * Potentially useful for emergency stop that allows being resumed.
+* @section interface
  */
 //#define FREEZE_FEATURE
 #if ENABLED(FREEZE_FEATURE)
   //#define FREEZE_PIN 41   // Override the default (KILL) pin here
-  #define FREEZE_STATE LOW  // State of pin indicating freeze
+#define FREEZE_STATE LOW  // State of pin indicating freeze
 #endif
 
 /**
@@ -4170,7 +4166,7 @@
  *
  * Add support for a low-cost 8x8 LED Matrix based on the Max7219 chip as a realtime status display.
  * Requires 3 signal wires. Some useful debug options are included to demonstrate its usage.
- * @section debug matrix
+* @section debug matrix
  */
 //#define MAX7219_DEBUG
 #if ENABLED(MAX7219_DEBUG)
@@ -4196,8 +4192,8 @@
   #define MAX7219_DEBUG_PLANNER_TAIL  4   // Show the planner queue tail position on this and the next LED matrix row
 
   #define MAX7219_DEBUG_PLANNER_QUEUE 0   // Show the current planner queue depth on this and the next LED matrix row
-                                          // If you experience stuttering, reboots, etc. this option can reveal how
-                                          // tweaks made to the configuration are affecting the printer in real-time.
+                                         // If you experience stuttering, reboots, etc. this option can reveal how
+                                         // tweaks made to the configuration are affecting the printer in real-time.
   #define MAX7219_DEBUG_PROFILE       6   // Display the fraction of CPU time spent in profiled code on this LED matrix
                                           // row. By default idle() is profiled so this shows how "idle" the processor is.
                                           // See class CodeProfiler.
@@ -4210,7 +4206,7 @@
  * Support for Synchronized Z moves when used with NanoDLP. G0/G1 axis moves will
  * output a "Z_move_comp" string to enable synchronization with DLP projector exposure.
  * This feature allows you to use [[WaitForDoneMessage]] instead of M400 commands.
- * @section nanodlp
+* @section nanodlp
  */
 //#define NANODLP_Z_SYNC
 #if ENABLED(NANODLP_Z_SYNC)
@@ -4219,7 +4215,7 @@
 
 /**
  * Ethernet. Use M552 to enable and set the IP address.
- * @section network
+* @section network
  */
 #if HAS_ETHERNET
   #define MAC_ADDRESS { 0xDE, 0xAD, 0xBE, 0xEF, 0xF0, 0x0D }  // A MAC address unique to your network
@@ -4282,30 +4278,30 @@
 
   // Add an LCD menu for MMU2
   //#define MMU2_MENUS
+  
+    // Settings for filament load / unload from the LCD menu.
+    // This is for Průša MK3-style extruders. Customize for your hardware.
+    #define MMU2_FILAMENTCHANGE_EJECT_FEED 80.0
+    #define MMU2_LOAD_TO_NOZZLE_SEQUENCE \
+      {  7.2, 1145 }, \
+      { 14.4,  871 }, \
+      { 36.0, 1393 }, \
+      { 14.4,  871 }, \
+      { 50.0,  198 }
 
-  // Settings for filament load / unload from the LCD menu.
-  // This is for Průša MK3-style extruders. Customize for your hardware.
-  #define MMU2_FILAMENTCHANGE_EJECT_FEED 80.0
-  #define MMU2_LOAD_TO_NOZZLE_SEQUENCE \
-    {  7.2, 1145 }, \
-    { 14.4,  871 }, \
-    { 36.0, 1393 }, \
-    { 14.4,  871 }, \
-    { 50.0,  198 }
-
-  #define MMU2_RAMMING_SEQUENCE \
-    {   1.0, 1000 }, \
-    {   1.0, 1500 }, \
-    {   2.0, 2000 }, \
-    {   1.5, 3000 }, \
-    {   2.5, 4000 }, \
-    { -15.0, 5000 }, \
-    { -14.0, 1200 }, \
-    {  -6.0,  600 }, \
-    {  10.0,  700 }, \
-    { -10.0,  400 }, \
-    { -50.0, 2000 }
-
+    #define MMU2_RAMMING_SEQUENCE \
+      {   1.0, 1000 }, \
+      {   1.0, 1500 }, \
+      {   2.0, 2000 }, \
+      {   1.5, 3000 }, \
+      {   2.5, 4000 }, \
+      { -15.0, 5000 }, \
+      { -14.0, 1200 }, \
+      {  -6.0,  600 }, \
+      {  10.0,  700 }, \
+      { -10.0,  400 }, \
+      { -50.0, 2000 }
+  
   /**
    * Using a sensor like the MMU2S
    * This mode requires a MK3S extruder with a sensor at the extruder idler, like the MMU2S.
@@ -4355,7 +4351,7 @@
 
 /**
  * Advanced Print Counter settings
- * @section stats
+* @section stats
  */
 #if ENABLED(PRINTCOUNTER)
   #define SERVICE_WARNING_BUZZES  3
