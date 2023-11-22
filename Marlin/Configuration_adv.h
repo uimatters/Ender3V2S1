@@ -516,7 +516,7 @@
 
 // The number of consecutive low temperature errors that can occur
 // before a MINTEMP error is triggered. (Shouldn't be more than 10.)
-#define MAX_CONSECUTIVE_LOW_TEMPERATURE_ERROR_ALLOWED 3 // BeltEnder setting
+#define MAX_CONSECUTIVE_LOW_TEMPERATURE_ERROR_ALLOWED 5 // BeltEnder setting
 
 /**
  * The number of milliseconds a hotend will preheat before starting to check
@@ -525,7 +525,7 @@
 * the minimum temperature your thermistor can read. The lower the better/safer.
 * This shouldn't need to be more than 30 seconds (30000)
  */
-#define PREHEAT_TIME_HOTEND_MS 1500  // BeltEnder setting
+#define PREHEAT_TIME_HOTEND_MS 10000  // BeltEnder setting
 //#define PREHEAT_TIME_BED_MS 0
 
 // @section extruder
@@ -537,7 +537,7 @@
 */
 //#define EXTRUDER_RUNOUT_PREVENT
 #if ENABLED(EXTRUDER_RUNOUT_PREVENT)
-  #define EXTRUDER_RUNOUT_MINTEMP 190
+  #define EXTRUDER_RUNOUT_MINTEMP 185
   #define EXTRUDER_RUNOUT_SECONDS 30
   #define EXTRUDER_RUNOUT_SPEED 1500  // (mm/min)
   #define EXTRUDER_RUNOUT_EXTRUDE 5   // (mm)
